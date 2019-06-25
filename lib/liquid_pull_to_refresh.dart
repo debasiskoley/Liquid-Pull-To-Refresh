@@ -656,6 +656,7 @@ class _LiquidPullToRefreshState extends State<LiquidPullToRefresh>
           animation: _positionController,
           builder: (BuildContext buildContext, Widget child) {
             return Container(
+              padding: EdgeInsets.only(top:0.0),
               height: _value.value * height * 2, //100.0
             );
           },
@@ -711,7 +712,6 @@ class _LiquidPullToRefreshState extends State<LiquidPullToRefresh>
                     : 0.0,
               ),
               child: Container(
-                padding: EdgeInsets.only(top:0.0),
                 height: _value.value * height * 2, // 100.0
                 // color: color,
                 decoration: decoration,
