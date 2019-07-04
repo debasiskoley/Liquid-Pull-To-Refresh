@@ -165,7 +165,7 @@ class _LiquidPullToRefreshState extends State<LiquidPullToRefresh>
   double _dragOffset;
 
   static final Animatable<double> _threeQuarterTween =
-      Tween<double>(begin: 0.0, end: 0.1);
+      Tween<double>(begin: 0.0, end: 0.75);
   static final Animatable<double> _oneToZeroTween =
       Tween<double>(begin: 1.0, end: 0.0);
 
