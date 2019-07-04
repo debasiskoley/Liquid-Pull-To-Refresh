@@ -334,12 +334,12 @@ class _LiquidPullToRefreshState extends State<LiquidPullToRefresh>
   }
 
   bool _handleGlowNotification(OverscrollIndicatorNotification notification) {
-    if (notification.depth != 0 || !notification.leading) return false;
-    if (_mode == _LiquidPullToRefreshMode.drag) {
+    // if (notification.depth != 0 || !notification.leading) return false;
+    // if (_mode == _LiquidPullToRefreshMode.drag) {
       notification.disallowGlow();
       return true;
-    }
-    return false;
+    // }
+    // return false;
   }
 
   // Stop showing the progress indicator.
