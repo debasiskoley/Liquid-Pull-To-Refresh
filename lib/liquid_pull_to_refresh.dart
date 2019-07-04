@@ -165,7 +165,7 @@ class _LiquidPullToRefreshState extends State<LiquidPullToRefresh>
   double _dragOffset;
 
   static final Animatable<double> _threeQuarterTween =
-      Tween<double>(begin: 0.0, end: 0.75);
+      Tween<double>(begin: 0.0, end: 0.1);
   static final Animatable<double> _oneToZeroTween =
       Tween<double>(begin: 1.0, end: 0.0);
 
@@ -334,12 +334,12 @@ class _LiquidPullToRefreshState extends State<LiquidPullToRefresh>
   }
 
   bool _handleGlowNotification(OverscrollIndicatorNotification notification) {
-    // if (notification.depth != 0 || !notification.leading) return false;
-    // if (_mode == _LiquidPullToRefreshMode.drag) {
+    if (notification.depth != 0 || !notification.leading) return false;
+    if (_mode == _LiquidPullToRefreshMode.drag) {
       notification.disallowGlow();
       return true;
-    // }
-    // return false;
+    }
+    return false;
   }
 
   // Stop showing the progress indicator.
